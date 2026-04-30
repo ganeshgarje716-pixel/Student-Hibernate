@@ -19,7 +19,11 @@
 
 <property name="hibernate.hbm2ddl.auto">update</property>
 
-<mapping class="com.entity.User"/>
+<property name="hibernate.show_sql">true</property>
+
+<mapping class="com.entity.Student"/>
+
+
 
 
 

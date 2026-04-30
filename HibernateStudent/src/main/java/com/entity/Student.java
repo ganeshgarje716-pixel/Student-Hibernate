@@ -1,26 +1,36 @@
 package com.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 @Entity
+@Table(name="MIT_Student")
 public class Student {
 	
 	
 	@Id
+	@Column(name="Student_ID",unique=true)
 	private int id;
 	
+	@Column(name="Student_NAME")
 	private String name;
 	
+	@Column(name="Student_EMAIL",unique=true)
 	private String email;
 	
+	@Column(name="Student_MOBILE_NO",unique=true)
 	private float mobileNo;
 	
+	@Column(name="Student_ADDRESS")
 	private String address;
 	
+	@Column(name="Student_Branch")
 	private String branch;
 	
+	@Column(name="Student_CGPA")
 	private double cgpa;
 
 	
@@ -36,6 +46,12 @@ public class Student {
 		this.cgpa = cgpa;
 	}
 
+	
+	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+	
 
 
 	public int getId() {
