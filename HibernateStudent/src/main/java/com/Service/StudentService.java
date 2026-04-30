@@ -31,6 +31,18 @@ public class StudentService {
 	}
 	
 	
+	public String update(Student student) {
+		
+		return dao.updateById(student);
+	}
+	
+	
+	public String delete(int id) {
+		
+		return dao.delete(id);
+	}
+	
+	
 	
 	
 	

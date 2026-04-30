@@ -58,6 +58,51 @@ public class StudentDao {
 	
 	
 	
+	public String updateById(Student student) {
+		
+		Session session = sf.openSession();
+		
+		Transaction tr = session.beginTransaction();
+		
+		Student existing = session.get(Student.class, student.getId());
+		
+		existing.setName(student.getName());
+		existing.setEmail(student.getEmail());
+		existing.setMobileNo(student.getMobileNo());
+		existing.setAddress(student.getAddress());
+		existing.setBranch(student.getBranch());
+		existing.setCgpa(student.getCgpa());
+		
+		session.update(existing);
+		
+		tr.commit();
+		
+		session.close();
+		
+		return "Student Update";
+		
+	}
+	
+	
+	
+	public String delete(int id) {
+		
+		Session session = sf.openSession();
+		
+		Transaction tr = session.beginTransaction();
+		
+		Student student = session.get(Student.class, id);
+		
+		session.delete(student);
+		
+		tr.commit();
+		
+		session.close();
+		
+		return "Student Delete";
+	}
+	
+	
 	
 	
 	

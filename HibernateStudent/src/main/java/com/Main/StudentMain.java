@@ -21,13 +21,15 @@ public class StudentMain {
 //		System.out.println(controller.get(11));
 		
 		
-		for (Student student : controller.getAll()) {
-			
-			System.out.println(student);
-		}
+//		for (Student student : controller.getAll()) {
+//			
+//			System.out.println(student);
+//		}
 		
 		
+//		System.out.println(controller.update(new Student(22, "Shyam", "shyam@gmail.com", 9876543210f, "Hydrabad", "Civil", 5.6)));
 		
+		System.out.println(controller.delete(22));
 		
 		
 		

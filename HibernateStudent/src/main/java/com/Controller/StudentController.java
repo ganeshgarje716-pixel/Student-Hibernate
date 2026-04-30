@@ -33,6 +33,19 @@ public class StudentController {
 	}
 	
 	
+	public String update(Student student) {
+		
+		return service.update(student);
+	}
+	
+	
+	public String delete(int id) {
+		
+		return service.delete(id);
+	}
+	
+	
+	
 	
 	
 	
