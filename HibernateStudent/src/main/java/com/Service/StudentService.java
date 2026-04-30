@@ -17,6 +17,13 @@ public class StudentService {
 	
 	
 	
+	public Student get(int id) {
+		
+		return dao.getStudent(id);
+	}
+	
+	
+	
 	
 	
 }

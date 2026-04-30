@@ -33,6 +33,17 @@ public class StudentDao {
 	
 	
 	
+	public Student getStudent(int id) {
+		
+		Session session = sf.openSession();
+		
+		Student student = session.get(Student.class, id);
+		
+		return student;
+	}
+	
+	
+	
 	
 	
 	
