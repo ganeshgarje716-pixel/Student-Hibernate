@@ -1,5 +1,7 @@
 package com.Dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -40,6 +42,18 @@ public class StudentDao {
 		Student student = session.get(Student.class, id);
 		
 		return student;
+	}
+	
+	
+	
+	
+	public List<Student> getAll() {
+		
+		Session session = sf.openSession();
+		
+		List<Student> students = session.createQuery("from Student").list();
+		
+		return students;
 	}
 	
 	

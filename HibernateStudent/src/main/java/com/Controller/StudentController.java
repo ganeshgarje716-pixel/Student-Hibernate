@@ -1,5 +1,7 @@
 package com.Controller;
 
+import java.util.List;
+
 import com.Service.StudentService;
 import com.entity.Student;
 
@@ -21,6 +23,13 @@ public class StudentController {
 	public Student get(int id) {
 		
 		return service.get(id);
+	}
+	
+	
+	
+	public List<Student> getAll() {
+		
+		 return service.getAll();
 	}
 	
 	
